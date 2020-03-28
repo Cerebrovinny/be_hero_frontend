@@ -6,7 +6,7 @@
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .logon-container section.form {
@@ -23,6 +23,9 @@
     font-size: 32px;
     margin-bottom: 32px;
 }
+
+/* estilos do link movido para o arquivo global.css para todos
+os links das paginas 
 
 .logon-container section.form form a {
     display: flex;
@@ -41,4 +44,5 @@
 
 .logon-container section.form form a:hover {
     opacity: 0.8;
-}
+} 
+*/
