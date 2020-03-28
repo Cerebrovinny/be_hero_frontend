@@ -12,7 +12,6 @@ export default function NewIncident() {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [value, setValue] = useState('');
-    
     const history = useHistory();
 
     const ongId = localStorage.getItem('ongId');
@@ -24,12 +23,12 @@ export default function NewIncident() {
             title,
             description,
             value,
-        };
+        }
 
         try {
             await api.post('incidents', data, {
                 headers: {
-                    Authorization: ongId,
+                    Authorization: ongId
                 }
             })
 
@@ -60,14 +59,18 @@ export default function NewIncident() {
                     value={title}
                     onChange={e => setTitle(e.target.value)}
                     />
+
                 <textarea 
-                    placeholder="Descricao" />
+                    placeholder="Descricao"
                     value={description}
-                    onChange={e => setDescription(e.target.description)}           
+                    onChange={e => setDescription(e.target.value)} 
+                    />
+                    
                     <input 
-                        placeholder="Valor em reais" />
+                        placeholder="Valor em reais"
                         value={value}
-                        onChange={e => setValue(e.target.value)}               
+                        onChange={e => setValue(e.target.value)}
+                     />             
 
                 <button className="button" type="submit">Cadastrar</button>
             </form>
